@@ -46,6 +46,12 @@ function buttonHandler() {
     let secondInputValue =  Number.parseInt(secondInput.value, 10);
 // function
     button.onclick = function(){
+    	if(input1.value.match(/,/)) {
+        input1.value = input1.value.replace(/,/g, '.');
+    	}
+    	if(input2.value.match(/,/)) {
+        input2.value = input2.value.replace(/,/g, '.');
+    	}
         lea1 = document.getElementById("input1").value;
         lea2 = document.getElementById("input2").value;
         if(isNaN(+lea1)){
